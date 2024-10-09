@@ -56,3 +56,24 @@ html {
   gap: 10px;
 }
 
+.lightMode {
+  background-color: #fff !important;
+  color: #000 !important;
+}
+
+.lightMode .navbar {
+  background-color: #fff;
+}
+
+.lightMode .tabs {
+  background-color: #f7f7f7;
+}
+.lightMode .tabs .tab {
+  background-color: #c2c1c1;
+  color: #000;
+}
+
+.lightMode .btn {
+  background-color: #c2c1c1;
+  color: #000;
+}

@@ -36,3 +36,23 @@ html {
   font-size: 16px;
 }
 
+.btnBlue {
+  background-color: #00aeef;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  cursor: pointer;
+  font-size: 16px;
+}
+.btnBlue:hover {
+  background-color: #0086b3;
+}
+
+.grid {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 10px;
+}
+

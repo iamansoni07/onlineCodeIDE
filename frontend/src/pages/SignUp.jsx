@@ -1,0 +1,45 @@
+import React, { useState } from "react";
+import logo from "../images/logo.png";
+import { Link, useNavigate } from "react-router-dom";
+import image from "../images/authPageSide.webp";
+import { api_base_url } from "../helper";
+
+const SignUp = () => {
+
+
+  return (
+    <>
+      <div className= "container w-screen min-h-screen flex items-center justify-between pl-[100px]">
+        <div className="left w-[35%]">
+          <img className="w-[200px]" src={logo} alt="" />
+          <form onSubmit={submitForm} className="w-full mt-[60px]" action="">
+            <div className="inputBox">
+              <input
+                required
+                onChange={(e) => {
+                  setUsername(e.target.value);
+                }}
+                value={username}
+                type="text"
+                placeholder="Username"
+              />
+            </div>
+
+
+
+
+
+            <p className="text-red-500 text-[14px] my-2">{error}</p>
+
+            <button className="btnBlue w-full mt-[20px]">Sign Up</button>
+          </form>
+        </div>
+
+
+
+      </div>
+    </>
+  );
+};
+
+export default SignUp;

@@ -37,6 +37,18 @@ const SignUp = () => {
               />
             </div>
 
+            <div className="inputBox">
+              <input
+                required
+                onChange={(e) => {
+                  setEmail(e.target.value);
+                }}
+                value={email}
+                type="email"
+                placeholder="Email"
+              />
+            </div>
+
 
 
             <p className="text-red-500 text-[14px] my-2">{error}</p>

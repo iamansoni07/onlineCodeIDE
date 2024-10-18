@@ -49,7 +49,24 @@ const SignUp = () => {
               />
             </div>
 
+            <div className="inputBox">
+              <input
+                required
+                onChange={(e) => {
+                  setPwd(e.target.value);
+                }}
+                value={pwd}
+                type="password"
+                placeholder="Password"
+              />
+            </div>
 
+            <p className="text-[gray]">
+              Already have an account{" "}
+              <Link to="/login" className="text-[#00AEEF]">
+                login
+              </Link>
+            </p>
 
             <p className="text-red-500 text-[14px] my-2">{error}</p>
 

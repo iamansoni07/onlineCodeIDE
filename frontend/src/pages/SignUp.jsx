@@ -5,7 +5,40 @@ import image from "../images/authPageSide.webp";
 import { api_base_url } from "../helper";
 
 const SignUp = () => {
+  const [username, setUsername] = useState("");
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [pwd, setPwd] = useState("");
 
+  const [error, setError] = useState("");
+
+  const navigate = useNavigate();
+
+  const submitForm = (e) => {
+    e.preventDefault();
+    fetch(api_base_url + "/signUp", {
+      mode: "cors",
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        username: username,
+        name: name,
+        email: email,
+        password: pwd,
+      }),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.success === true) {
+          alert("Account created successfully");
+          navigate("/login");
+        } else {
+          setError(data.message);
+        }
+      });
+  };
 
   return (
     <>

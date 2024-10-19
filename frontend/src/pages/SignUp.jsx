@@ -74,7 +74,27 @@ const SignUp = () => {
           </form>
         </div>
 
+        <div className="relative w-[55%] h-screen flex flex-col text-white font-poppins">
+          <img
+            className="absolute top-0 left-0 w-full h-full object-cover"
+            src={image}
+            alt=""
+          />
 
+          <div className="relative z-10 h-full w-full">
+            <div className="absolute top-[30%] w-full text-center px-6">
+              <h1 className="text-5xl font-bold font-inter tracking-wide leading-snug">
+                Build <span className="text-[#00AEEF]">software</span>, better
+              </h1>
+            </div>
+
+            <div className="absolute top-[40%] w-full text-center px-6">
+              <p className="text-lg font-medium leading-relaxed font-poppins">
+                On-demand coding assistance for self-guided projects
+              </p>
+            </div>
+          </div>
+        </div>
 
       </div>
     </>

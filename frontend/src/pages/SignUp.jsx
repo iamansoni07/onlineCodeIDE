@@ -42,7 +42,7 @@ const SignUp = () => {
 
   return (
     <>
-      <div className= "container w-screen min-h-screen flex items-center justify-between pl-[100px]">
+      <div className=" container w-screen min-h-screen flex items-center justify-between pl-[100px]">
         <div className="left w-[35%]">
           <img className="w-[200px]" src={logo} alt="" />
           <form onSubmit={submitForm} className="w-full mt-[60px]" action="">
@@ -135,3 +135,6 @@ const SignUp = () => {
 };
 
 export default SignUp;
+
+
+

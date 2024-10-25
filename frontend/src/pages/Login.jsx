@@ -52,6 +52,15 @@ const Login = () => {
           </form>
         </div>
 
+        <div className="relative w-[55%] h-screen flex flex-col text-white font-poppins">
+          <img
+            className="absolute top-0 left-0 w-full h-full object-cover"
+            src={image}
+            alt=""
+          />
+
+
+        </div>
 
       </div>
     </>

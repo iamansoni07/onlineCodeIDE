@@ -72,7 +72,7 @@ const Login = () => {
             </div>
 
             <p className="text-[gray]">
-              Don`&apos;`t have an account{" "}
+              Don`&lsquo;`t have an account{" "}
               <Link to="/signUp" className="text-[#00AEEF]">
                 Sign Up
               </Link>

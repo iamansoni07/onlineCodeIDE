@@ -12,7 +12,33 @@ const Login = () => {
 
   const navigate = useNavigate();
 
-
+  const submitForm = (e) => {
+    e.preventDefault();
+    fetch(api_base_url + "/login", {
+      mode: "cors",
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        email: email,
+        password: pwd,
+      }),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.success === true) {
+          localStorage.setItem("token", data.token);
+          localStorage.setItem("isLoggedIn", true);
+          localStorage.setItem("userId", data.userId);
+          setTimeout(() => {
+            window.location.href = "/";
+          }, 200);
+        } else {
+          setError(data.message);
+        }
+      });
+  };
 
   return (
     <>

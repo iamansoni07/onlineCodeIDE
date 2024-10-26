@@ -5,7 +5,13 @@ import image from "../images/authPageSide.webp";
 import { api_base_url } from "../helper";
 
 const Login = () => {
- 
+  const [email, setEmail] = useState("");
+  const [pwd, setPwd] = useState("");
+
+  const [error, setError] = useState("");
+
+  const navigate = useNavigate();
+
 
 
   return (

@@ -21,7 +21,25 @@ const Home = () => {
   const [userData, setUserData] = useState(null);
   const [userError, setUserError] = useState("");;
 
-
+  useEffect(() => {
+    fetch(api_base_url + "/getUserDetails", {
+      mode: "cors",
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        userId: localStorage.getItem("userId")
+      })
+    }).then(res => res.json()).then(data => {
+      if (data.success) {
+        setUserData(data.user);
+      }
+      else {
+        setUserError(data.message);
+      }
+    })
+  }, [])
 
   const [isGridLayout, setIsGridLayout] = useState(false);
 

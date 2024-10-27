@@ -63,7 +63,26 @@ const Home = () => {
         </div>
       </div>
 
-
+      {/* Project Display */}
+      <div className="cards">
+        {
+          isGridLayout ?
+            <div className='grid px-[100px]'>
+              {
+                filteredData.length > 0 ? filteredData.map((item, index) => (
+                  <GridCard key={index} item={item} />
+                )) : <p>No projects found</p>
+              }
+            </div>
+            : <div className='list px-[100px]'>
+              {
+                filteredData.length > 0 ? filteredData.map((item, index) => (
+                  <ListCard key={index} item={item} />
+                )) : <p>No projects found</p>
+              }
+            </div>
+        }
+      </div>
 
 
     </>

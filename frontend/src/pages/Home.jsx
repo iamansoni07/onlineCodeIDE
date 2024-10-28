@@ -19,6 +19,32 @@ const Home = () => {
     item.title.toLowerCase().includes(searchQuery.toLowerCase()) // Case insensitive filtering
   ) : [];
 
+  const createProj = (e) => {
+    if (projTitle === "") {
+      alert("Please Enter Project Title");
+    } else {
+      fetch(api_base_url + "/createProject", {
+        mode: "cors",
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          title: projTitle,
+          userId: localStorage.getItem("userId")
+        })
+      }).then(res => res.json()).then(data => {
+        if (data.success) {
+          setIsCreateModelShow(false);
+          setProjTitle("");
+          alert("Project Created Successfully");
+          navigate(`/editior/${data.projectId}`);
+        } else {
+          alert("Something Went Wrong");
+        }
+      });
+    }
+  };
 
 
 

@@ -7,7 +7,14 @@ import { useNavigate } from 'react-router-dom';
 
 const Home = () => {
 
+  const [data, setData] = useState(null);
+  const [error, setError] = useState("");
+  const [searchQuery, setSearchQuery] = useState(''); // State for search query
+  const [projTitle, setProjTitle] = useState("");
+  const navigate = useNavigate();
+  const [isCreateModelShow, setIsCreateModelShow] = useState(false);
 
+  // Filter data based on search query
 
 
 

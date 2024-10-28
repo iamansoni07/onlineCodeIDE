@@ -15,7 +15,9 @@ const Home = () => {
   const [isCreateModelShow, setIsCreateModelShow] = useState(false);
 
   // Filter data based on search query
-
+  const filteredData = data ? data.filter(item =>
+    item.title.toLowerCase().includes(searchQuery.toLowerCase()) // Case insensitive filtering
+  ) : [];
 
 
 

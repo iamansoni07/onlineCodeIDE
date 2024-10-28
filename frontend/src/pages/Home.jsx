@@ -46,7 +46,24 @@ const Home = () => {
     }
   };
 
-
+  const getProj = () => {
+    fetch(api_base_url + "/getProjects", {
+      mode: "cors",
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        userId: localStorage.getItem("userId")
+      })
+    }).then(res => res.json()).then(data => {
+      if (data.success) {
+        setData(data.projects);
+      } else {
+        setError(data.message);
+      }
+    });
+  };
 
   useEffect(() => {
     getProj();

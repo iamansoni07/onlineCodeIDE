@@ -7,6 +7,35 @@ import { api_base_url } from "../helper";
 import { useParams } from "react-router-dom";
 
 const Editior = () => {
+  const [tab, setTab] = useState("html");
+  const [isLightMode, setIsLightMode] = useState(false);
+  const [isExpanded, setIsExpanded] = useState(false);
+  const [htmlCode, setHtmlCode] = useState("<h1>Hello world</h1>");
+  const [cssCode, setCssCode] = useState("body { background-color: #f4f4f4; }");
+  const [jsCode, setJsCode] = useState("// some comment");
+
+  // Extract projectID from URL using useParams
+  const { projectID } = useParams();
+
+  const changeTheme = () => {
+    const editorNavbar = document.querySelector(".EditiorNavbar");
+    if (isLightMode) {
+      editorNavbar.style.background = "#141414";
+      document.body.classList.remove("lightMode");
+      setIsLightMode(false);
+    } else {
+      editorNavbar.style.background = "#f4f4f4";
+      document.body.classList.add("lightMode");
+      setIsLightMode(true);
+    }
+  };
+
+
+
+
+
+
+
 
 
   return (

@@ -30,7 +30,16 @@ const Editior = () => {
     }
   };
 
+  const run = () => {
+    const html = htmlCode;
+    const css = `<style>${cssCode}</style>`;
+    const js = `<script>${jsCode}</script>`;
+    const iframe = document.getElementById("iframe");
 
+    if (iframe) {
+      iframe.srcdoc = html + css + js;
+    }
+  };
 
 
 

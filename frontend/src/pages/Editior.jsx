@@ -47,7 +47,25 @@ const Editior = () => {
     }, 200);
   }, [htmlCode, cssCode, jsCode]);
 
-
+  useEffect(() => {
+    fetch(api_base_url + "/getProject", {
+      mode: "cors",
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        userId: localStorage.getItem("userId"),
+        projId: projectID, // Use projectID here
+      }),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        setHtmlCode(data.project.htmlCode);
+        setCssCode(data.project.cssCode);
+        setJsCode(data.project.jsCode);
+      });
+  }, [projectID]);
 
 
 

@@ -41,7 +41,11 @@ const Editior = () => {
     }
   };
 
-
+  useEffect(() => {
+    setTimeout(() => {
+      run();
+    }, 200);
+  }, [htmlCode, cssCode, jsCode]);
 
 
 

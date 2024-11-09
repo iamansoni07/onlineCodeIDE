@@ -158,7 +158,40 @@ const Editior = () => {
             </div>
           </div>
 
-
+          {tab === "html" ? (
+            <Editor
+              onChange={(value) => {
+                setHtmlCode(value || "");
+                run();
+              }}
+              height="82vh"
+              theme={isLightMode ? "vs-light" : "vs-dark"}
+              language="html"
+              value={htmlCode}
+            />
+          ) : tab === "css" ? (
+            <Editor
+              onChange={(value) => {
+                setCssCode(value || "");
+                run();
+              }}
+              height="82vh"
+              theme={isLightMode ? "vs-light" : "vs-dark"}
+              language="css"
+              value={cssCode}
+            />
+          ) : (
+            <Editor
+              onChange={(value) => {
+                setJsCode(value || "");
+                run();
+              }}
+              height="82vh"
+              theme={isLightMode ? "vs-light" : "vs-dark"}
+              language="javascript"
+              value={jsCode}
+            />
+          )}
         </div>
 
         {!isExpanded && (

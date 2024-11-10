@@ -8,6 +8,26 @@ import { api_base_url, toggleClass } from "../helper";
 
 const Navbar = ({ isGridLayout, setIsGridLayout }) => {
 
+  useEffect(() => {
+    fetch(api_base_url + "/getUserDetails", {
+      mode: "cors",
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        userId: localStorage.getItem("userId"),
+      }),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.success) {
+          setData(data.user);
+        } else {
+          setError(data.message);
+        }
+      });
+  }, []);
 
 
 

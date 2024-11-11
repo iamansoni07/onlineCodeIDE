@@ -67,7 +67,12 @@ const Navbar = ({ isGridLayout, setIsGridLayout }) => {
             </h3>
           </div>
 
-
+          <i
+            className="flex items-center gap-2 mt-3 mb-2 cursor-pointer"
+            style={{ fontStyle: "normal" }}
+          >
+            <MdLightMode className="text-[20px]" /> Light mode
+          </i>
 
 
         </div>

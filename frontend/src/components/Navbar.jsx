@@ -7,6 +7,10 @@ import { BsGridFill } from "react-icons/bs";
 import { api_base_url, toggleClass } from "../helper";
 
 const Navbar = ({ isGridLayout, setIsGridLayout }) => {
+  const navigate = useNavigate();
+
+  const [data, setData] = useState(null);
+  const [error, setError] = useState("");
 
   useEffect(() => {
     fetch(api_base_url + "/getUserDetails", {

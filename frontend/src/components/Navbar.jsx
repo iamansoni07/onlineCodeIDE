@@ -74,7 +74,14 @@ const Navbar = ({ isGridLayout, setIsGridLayout }) => {
             <MdLightMode className="text-[20px]" /> Light mode
           </i>
 
-
+          <i
+            onClick={() => setIsGridLayout(!isGridLayout)}
+            className="flex items-center gap-2 mt-3 mb-2 cursor-pointer"
+            style={{ fontStyle: "normal" }}
+          >
+            <BsGridFill className="text-[20px]" />{" "}
+            {isGridLayout ? "List" : "Grid"} layout
+          </i>
         </div>
       </div>
     </>

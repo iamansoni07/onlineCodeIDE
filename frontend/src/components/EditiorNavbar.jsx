@@ -10,6 +10,7 @@ const EditiorNavbar = () => {
         <div className="logo">
           <img className='w-[150px] cursor-pointer' src={logo} alt="" />
         </div>
+        <p>File / <span className='text-[gray]'>My first project</span></p>
       </div>
     </>
   )

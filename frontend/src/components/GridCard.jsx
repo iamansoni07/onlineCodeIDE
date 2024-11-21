@@ -20,7 +20,18 @@ const GridCard = ({item}) => {
         </div>
       </div>
 
-
+      {
+        isDeleteModelShow ? <div className="model fixed top-0 left-0 w-screen h-screen bg-[rgba(0,0,0,0.1)] flex justify-center items-center flex-col">
+          <div className="mainModel w-[25vw] h-[25vh] bg-[#141414] rounded-lg p-[20px]">
+            <h3 className='text-3xl'>Do you want to delete <br />
+              this project</h3>
+            <div className='flex w-full mt-5 items-center gap-[10px]'>
+              <button className='p-[10px] rounded-lg bg-[#FF4343] text-white cursor-pointer min-w-[49%]'>Delete</button>
+              <button onClick={()=>{setIsDeleteModelShow(false)}} className='p-[10px] rounded-lg bg-[#1A1919] text-white cursor-pointer min-w-[49%]'>Cancel</button>
+            </div>
+          </div>
+        </div> : ""
+      }
     </>
   )
 }

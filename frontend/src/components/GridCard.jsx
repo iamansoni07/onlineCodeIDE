@@ -4,7 +4,8 @@ import codeImg from "../images/code.png"
 import { useNavigate } from 'react-router-dom';
 
 const GridCard = ({item}) => {
-
+  const [isDeleteModelShow, setIsDeleteModelShow] = useState(false);
+  const navigate = useNavigate();
 
   return (
     <>

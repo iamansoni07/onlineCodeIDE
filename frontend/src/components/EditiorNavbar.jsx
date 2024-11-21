@@ -17,4 +17,4 @@ const EditiorNavbar = () => {
   )
 }
 
-export default EditiorNavbar
+export default EditiorNavbar;

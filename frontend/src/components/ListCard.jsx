@@ -5,7 +5,9 @@ import { api_base_url } from '../helper';
 import { useNavigate } from 'react-router-dom';
 
 const ListCard = ({item}) => {
- 
+  const navigate = useNavigate();
+  const [isDeleteModelShow, setIsDeleteModelShow] = useState(false);
+  
 
   return (
     <>

@@ -34,7 +34,10 @@ const ListCard = ({item}) => {
       <div className="listCard mb-2 w-[full] flex items-center justify-between p-[10px] bg-[#040916] cursor-pointer rounded-lg hover:bg-[#111b34]">
         <div onClick={()=>{navigate(`/editior/${item._id}`)}} className='flex items-center gap-2'>
           <img className='w-[80px]' src={img} alt="" />
-
+          <div>
+            <h3 className='text-[20px]'>{item.title}</h3>
+            <p className='text-[gray] text-[14px]'>Created in {new Date(item.date).toDateString()}</p>
+          </div>
         </div>
 
       </div>

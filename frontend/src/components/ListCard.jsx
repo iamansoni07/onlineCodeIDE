@@ -39,7 +39,9 @@ const ListCard = ({item}) => {
             <p className='text-[gray] text-[14px]'>Created in {new Date(item.date).toDateString()}</p>
           </div>
         </div>
-
+        <div>
+          <img onClick={()=>{setIsDeleteModelShow(true)}} className='w-[30px] cursor-pointer mr-4' src={deleteImg} alt="" />
+        </div>
       </div>
 
 

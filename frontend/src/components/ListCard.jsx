@@ -60,4 +60,4 @@ const ListCard = ({item}) => {
   )
 }
 
-export default ListCard
+export default ListCard;

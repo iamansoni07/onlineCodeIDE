@@ -12,6 +12,36 @@ router.get('/', function (req, res, next) {
 
 const secret = "secret"; // secret key for jwt
 
+router.post("/signUp", async (req, res) => {
+  let { username, name, email, password } = req.body;
+  let emailCon = await userModel.findOne({ email: email });
+  if (emailCon) {
+    return res.json({ success: false, message: "Email already exists" });
+  }
+  else {
+
+    bcrypt.genSalt(10, function (err, salt) {
+      bcrypt.hash(password, salt, function (err, hash) {
+        let user = userModel.create({
+          username: username,
+          name: name,
+          email: email,
+          password: hash
+        });
+
+        return res.json({ success: true, message: "User created successfully" });
+      });
+    });
+
+  }
+});
+
+
+
+
+
+
+
 
 
 

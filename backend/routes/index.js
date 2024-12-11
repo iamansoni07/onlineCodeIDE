@@ -58,7 +58,16 @@ router.post("/login", async (req, res) => {
   }
 });
 
-
+router.post("/getUserDetails", async (req, res) => {
+  console.log("Called")
+  let { userId } = req.body;
+  let user = await userModel.findOne({ _id: userId });
+  if (user) {
+    return res.json({ success: true, message: "User details fetched successfully", user: user });
+  } else {
+    return res.json({ success: false, message: "User not found!" });
+  }
+});
 
 
 

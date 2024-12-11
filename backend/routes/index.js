@@ -98,7 +98,17 @@ router.post("/getProjects", async (req, res) => {
   }
 });
 
-
+router.post("/deleteProject", async (req, res) => {
+  let {userId, progId} = req.body;
+  let user = await userModel.findOne({ _id: userId });
+  if (user) {
+    let project = await projectModel.findOneAndDelete({ _id: progId });
+    return res.json({ success: true, message: "Project deleted successfully" });
+  }
+  else {
+    return res.json({ success: false, message: "User not found!" });
+  }
+});
 
 
 

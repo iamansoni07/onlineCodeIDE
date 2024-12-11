@@ -86,7 +86,17 @@ router.post("/createProject", async (req, res) => {
   }
 });
 
-
+router.post("/getProjects", async (req, res) => {
+  let { userId } = req.body;
+  let user = await userModel.findOne({ _id: userId });
+  if (user) {
+    let projects = await projectModel.find({ createdBy: userId });
+    return res.json({ success: true, message: "Projects fetched successfully", projects: projects });
+  }
+  else {
+    return res.json({ success: false, message: "User not found!" });
+  }
+});
 
 
 

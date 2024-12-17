@@ -103,6 +103,12 @@ const Login = () => {
                 On-demand coding assistance for self-guided projects
               </p>
             </div>
+            
+            <div className="absolute top-[45%] w-full text-center px-6">
+              <p className="text-lg font-medium leading-relaxed font-poppins">
+                by amansoni0713
+              </p>
+            </div>
           </div>
         </div>
 

@@ -1,6 +1,6 @@
 let mongoose = require('mongoose');
 
-mongoose.connect('mongodb://127.0.0.1:27017/online-code-ide');
+mongoose.connect('mongodb+srv://amansoni0713:Xd7ICihHMRgUlHqh@cluster1.pa80r.mongodb.net/?retryWrites=true&w=majority&appName=Cluster1');
 
 let userSchema = new mongoose.Schema({
   name: String,

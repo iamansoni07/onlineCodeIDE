@@ -9,7 +9,7 @@ const GridCard = ({item}) => {
 
   return (
     <>
-      <div className="gridCard bg-[#040916] w-[270px] p-[10px] h-[180px] cursor-pointer hover:bg-[#111b34] rounded-lg shadow-lg shadow-black/50">
+      <div className="gridCard bg-[#040916] w-[270px] p-[10px] h-[180px] cursor-pointer hover:bg-[#131e3b] rounded-lg shadow-lg shadow-black/50">
        <div onClick={()=>{navigate(`/editior/${item._id}`)}}>
         <img className="w-[90px]" src={codeImg} alt="" />
         <h3 className='text-[20px] w-[90%] line-clamp-1'>{item.title}</h3>

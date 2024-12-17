@@ -1,0 +1,12 @@
+{
+    "build": {
+      "env": {
+        "VERCEL_PRE_BUILD": "chmod +x /vercel/path0/frontend/node_modules/.bin/vite"
+      },
+      "commands": [
+        "npm install",
+        "npm run build"
+      ]
+    }
+  }
+  

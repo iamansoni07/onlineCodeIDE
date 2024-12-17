@@ -58,7 +58,7 @@ var usersRouter = require('./routes/users');
 var mongoose = require('mongoose');
 
 // Replace with your actual MongoDB URI
-const uri = 'mongodb://127.0.0.1:27017/online-code-ide';
+const uri = "mongodb+srv://amansoni0713:4aXtrAVBNoZqocjB@cluster1.pa80r.mongodb.net/?retryWrites=true&w=majority&appName=Cluster1";
 
 mongoose.connect(uri, {
   useNewUrlParser: true,

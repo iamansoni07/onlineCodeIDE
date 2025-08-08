@@ -86,14 +86,6 @@ Visit `http://localhost:5173` to use the app.
 
 ---
 
-## 📸 Screenshots / Demo
-
-> Recommended: Add screenshots showing live collaboration, editor UI, and JWT login flow.
-
-🔗 **Live Demo** (optional): [https://your-live-app.vercel.app](#)
-
----
-
 ## 👨‍💻 Author
 
 **Aman Soni**  
